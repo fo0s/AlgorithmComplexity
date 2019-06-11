@@ -13,7 +13,7 @@ describe 'Arrays--' do
     expect([1, 2, 3, 4, 5].my_reverse).to eq([5, 4, 3, 2, 1])
   end
 
-  it 'sorts the values of an array' do
+  it 'sorts the values of an array using bubble sort' do
     expect([4, 2, 1, 7, 3, 5, 6].my_bubble_sort).to eq([1, 2, 3, 4, 5, 6, 7])
   end
 end
