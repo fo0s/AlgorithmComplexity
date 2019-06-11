@@ -37,6 +37,7 @@ class Array
 
   def my_quick_sort
     return self if length <= 1
+
     pivot = self[0]
     less, greatereq = self[1..-1].partition { |x| x < pivot }
     less.my_quick_sort + [pivot] + greatereq.my_quick_sort
@@ -56,5 +57,17 @@ class Integer
     end
 
     reversed_number
+  end
+
+  def my_fib
+    fib_seq = [0, 1]
+
+    self.times do
+      last_num = fib_seq[-1]
+      second_last_num = fib_seq[-2]
+      fib_seq << (second_last_num + last_num)
+    end
+
+    fib_seq
   end
 end
