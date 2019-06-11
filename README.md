@@ -33,12 +33,19 @@ Custom sorting methods. Sorting options; bubble_sort and and quick_sort. Can cur
 
 | Sorting method | Description | Illustrated image |
 | :---: | :---: | :---: |
-| Bubbel Sort | Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent pairs and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. | ![bubble sort](https://en.wikipedia.org/wiki/File:Bubble-sort-example-300px.gif) |
+| **Bubbel Sort** | Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent pairs and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. | ![bubble sort][bubble] |
 
+Usage:  
 `[5, 2, 4, 1, 3].bubble_sort`  
 > => [1, 2, 3, 4, 5]
 
-> Quick sort is an efficient sorting algorithm, serving as a systematic method for placing the elements of a random access file or an array in order. 
+| Sorting method | Description | Illustrated image |
+| :---: | :---: | :---: |
+| **Quick sort**| Quick sort is an efficient sorting algorithm, serving as a systematic method for placing the elements of a random access file or an array in order. |  ![quick sort][quick]
 
+Usage:  
 `[5, 2, 4, 1, 3].quick_sort`  
 > => [1, 2, 3, 4, 5]
+
+[bubble]: ./lib/images/Bubble-sort-example-300px.gif "Wikipedia's Bubble sort illustration"
+[quick]: ./lib/images/220px-Sorting_quicksort_anim.gif "Wikipedia's Quick sort illustration"
