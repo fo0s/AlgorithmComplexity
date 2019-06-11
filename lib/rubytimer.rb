@@ -1,13 +1,15 @@
-class Timer
-    def self.time(&block)
-        start_time = Time.now
-        result = block.call
-        end_time = Time.now
-        @time_taken = end_time - start_time
-        result
-    end
+# frozen_string_literal: true
 
-    def self.elapsedTime
-        return @time_taken
-    end
+class Timer
+  def self.time(&block)
+    start_time = Time.now
+    result = block.call
+    end_time = Time.now
+    @time_taken = end_time - start_time
+    result
+  end
+
+  def self.elapsedTime
+    @time_taken
+  end
 end

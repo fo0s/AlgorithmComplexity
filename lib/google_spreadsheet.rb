@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'google_drive'
 
 # Google sheets database interaction
@@ -22,7 +24,6 @@ class GoogleDatabase
       @worksheet = @spreadsheet.worksheet_by_title('Web')
     end
   end
-
 
   def read_database
     @google_database = []

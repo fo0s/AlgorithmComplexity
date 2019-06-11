@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'simplecov'
 require 'simplecov-console'
 require 'coveralls'
@@ -8,9 +10,9 @@ require 'rspec'
 Coveralls.wear!
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
-                                                                Coveralls::SimpleCov::Formatter,
-                                                                SimpleCov::Formatter::Console
-                                                              ])
+                                                                 Coveralls::SimpleCov::Formatter,
+                                                                 SimpleCov::Formatter::Console
+                                                               ])
 SimpleCov.start
 
 RSpec::Expectations.configuration.on_potential_false_positives = :nothing
