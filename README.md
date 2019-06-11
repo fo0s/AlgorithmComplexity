@@ -35,9 +35,9 @@ Usage:
 
 Custom sorting methods. Sorting options; my_bubble_sort and my_quick_sort. Can currently only sort arrays.
 
-| Sorting method | Description | Illustrated image |
-| :---: | :---: | :---: |
-| **Bubble Sort** | Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent pairs and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. | ![bubble sort][bubble] |
+| Description | Illustrated image |
+| :---: | :---: |
+| Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent pairs and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. | ![bubble sort][bubble] |
 
 
 Usage:  
@@ -46,9 +46,9 @@ Usage:
 
 ---
 
-| Sorting method | Description | Illustrated image |
-| :---: | :---: | :---: |
-| **Quick sort**| Quick sort is an efficient sorting algorithm, serving as a systematic method for placing the elements of a random access file or an array in order. |  ![quick sort][quick]
+| Description | Illustrated image |
+| :---: | :---: |
+Quick sort is an efficient sorting algorithm, serving as a systematic method for placing the elements of a random access file or an array in order. |  ![quick sort][quick]
 
 Usage:  
 `[5, 2, 4, 1, 3].my_quick_sort`  
