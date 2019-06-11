@@ -16,6 +16,10 @@ describe 'Arrays--' do
   it 'sorts the values of an array using bubble sort' do
     expect([4, 2, 1, 7, 3, 5, 6].my_bubble_sort).to eq([1, 2, 3, 4, 5, 6, 7])
   end
+
+    it 'sorts the values of an array using bubble sort' do
+    expect([4, 2, 1, 7, 3, 5, 6].my_quick_sort).to eq([1, 2, 3, 4, 5, 6, 7])
+  end
 end
 
 describe 'Numbers--' do

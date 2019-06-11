@@ -35,7 +35,13 @@ class Array
     self
   end
 
-  
+  def my_quick_sort
+    return self if length <= 1
+    pivot = self[0]
+    less, greatereq = self[1..-1].partition { |x| x < pivot }
+    less.my_quick_sort + [pivot] + greatereq.my_quick_sort
+  end
+
 end
 
 # Overriding integer class

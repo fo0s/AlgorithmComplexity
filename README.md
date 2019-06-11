@@ -18,6 +18,8 @@ Usage:
 
 > => 1.9964e-05
 
+---
+
 ### Reverse
 
 Custom reverse method. Can reverse strings, integers and arrays.
@@ -27,6 +29,8 @@ Usage:
 
 > => [5, 4, 3, 2, 1]
 
+---
+
 ### Sort
 
 Custom sorting methods. Sorting options; bubble_sort and and quick_sort. Can currently only sort arrays.
@@ -35,9 +39,12 @@ Custom sorting methods. Sorting options; bubble_sort and and quick_sort. Can cur
 | :---: | :---: | :---: |
 | **Bubbel Sort** | Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent pairs and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. | ![bubble sort][bubble] |
 
+
 Usage:  
 `[5, 2, 4, 1, 3].bubble_sort`  
 > => [1, 2, 3, 4, 5]
+
+---
 
 | Sorting method | Description | Illustrated image |
 | :---: | :---: | :---: |
@@ -46,6 +53,8 @@ Usage:
 Usage:  
 `[5, 2, 4, 1, 3].quick_sort`  
 > => [1, 2, 3, 4, 5]
+
+---
 
 [bubble]: ./lib/images/Bubble-sort-example-300px.gif "Wikipedia's Bubble sort illustration"
 [quick]: ./lib/images/220px-Sorting_quicksort_anim.gif "Wikipedia's Quick sort illustration"
