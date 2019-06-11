@@ -7,6 +7,8 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 
+system 'clear'
+
 Coveralls.wear!
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([

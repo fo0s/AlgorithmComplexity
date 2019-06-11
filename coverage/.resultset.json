@@ -2,6 +2,8 @@
   "RSpec": {
     "coverage": {
       "/home/random/Dropbox/Code/Projects/AlgorithmComplexity/spec/my_methods_spec.rb": [
+        null,
+        null,
         1,
         null,
         1,
@@ -27,6 +29,7 @@
         null
       ],
       "/home/random/Dropbox/Code/Projects/AlgorithmComplexity/lib/my_methods.rb": [
+        null,
         1,
         1,
         1,
@@ -37,6 +40,7 @@
         null,
         null,
         1,
+        null,
         null,
         null,
         null,
@@ -51,14 +55,16 @@
         1,
         null,
         null,
+        null,
         1,
         1,
-        9,
-        45,
+        7,
+        28,
         null,
         null,
         null,
         1,
+        null,
         null,
         null,
         null,
@@ -77,6 +83,6 @@
         null
       ]
     },
-    "timestamp": 1560274248
+    "timestamp": 1560276618
   }
 }

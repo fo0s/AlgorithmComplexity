@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Overriding string class
 class String
   def my_reverse
@@ -36,6 +34,8 @@ class Array
 
     self
   end
+
+  
 end
 
 # Overriding integer class
