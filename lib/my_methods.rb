@@ -17,6 +17,21 @@ class String
     original.join().to_s
   end
 
+  def two_most
+    hash_values = {}
+    @order = []
+    words = self.split
+    words.each do |word|
+      hash_values[word] = hash_values.key?(word) ? hash_values[word] + 1 : 1
+    end
+    # sort the hash by value. Store for future extraction
+    hash_values.sort_by { |value| value[1] }.each do |element|
+      @order << [element[0], element[1]]
+    end
+
+    "#{@order[-1].to_s}, #{@order[-2].to_s}"
+  end
+
 end
 
 # Overriding array class

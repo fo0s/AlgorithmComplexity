@@ -8,6 +8,10 @@ describe 'Strings' do
   it 'shuffles a string or word' do
     expect('apple'.my_shuffle).to_not be('apple')
   end
+
+  it 'displays the 2 most occuring words or characters in a string' do
+    expect('a b c d a c d a'.two_most).to eq("[\"a\", 3], [\"d\", 2]")
+  end
 end
 
 describe 'Arrays--' do
@@ -25,6 +29,10 @@ describe 'Arrays--' do
 
   it 'shuffles an input of array' do
     expect([1, 2, 3, 4, 5, 6, 7].my_shuffle).not_to eq([1, 2, 3, 4, 5, 6, 7])
+  end
+
+  it 'sorts an array full of binary values' do
+    expect([1, 0, 1, 1, 0, 1, 1, 0, 0].my_quick_sort).to eq([0, 0, 0, 0, 1, 1, 1, 1, 1])
   end
 end
 
