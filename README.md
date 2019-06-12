@@ -20,6 +20,15 @@ Usage:
 
 ---
 
+### Shuffle
+
+A simple shuffle system that computates a random number between 1 and the legth of the input, extracts that then loops until the length of the input is 0. The main impliment is made using array. The string and integer versions are broken into an array then has the array algorithm is parsed on them. The system can be made better, this is the basic version.
+
+Usage:  
+`[1, 2, 3, 4, 5].my_shuffle`  
+
+> => [4, 5, 2, 3, 1]
+
 ### Reverse
 
 Custom reverse method. Can reverse strings, integers and arrays.

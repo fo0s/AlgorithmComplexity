@@ -11,6 +11,12 @@ class String
     reversed_string
   end
 
+  def my_shuffle
+    original = self.split("")
+    original.my_shuffle
+    original.join().to_s
+  end
+
 end
 
 # Overriding array class
@@ -79,5 +85,11 @@ class Integer
     end
 
     fib_seq
+  end
+
+  def my_shuffle
+    original = self.to_s.split("")
+    original.my_shuffle
+    original.join().to_i
   end
 end
