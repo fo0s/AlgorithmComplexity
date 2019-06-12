@@ -40,6 +40,16 @@ Usage:
 
 ---
 
+### 2 most
+
+Takes a string of words or characters, sorts it into values then displays the 2 most occuring.
+
+Usage:  
+`'a b c d a c d a'.two_most`  
+> => "[\"a\", 3], [\"d\", 2]"
+
+---
+
 ### Sort
 
 Custom sorting methods. Sorting options; my_bubble_sort and my_quick_sort. Can currently only sort arrays.
