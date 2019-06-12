@@ -10,6 +10,7 @@ class String
 
     reversed_string
   end
+
 end
 
 # Overriding array class
@@ -41,6 +42,15 @@ class Array
     pivot = self[0]
     less, greatereq = self[1..-1].partition { |x| x < pivot }
     less.my_quick_sort + [pivot] + greatereq.my_quick_sort
+  end
+
+  def my_shuffle
+    (length - 1).downto(1) do |index|
+      letter = rand(index + 1)
+      self[index], self[letter] = self[letter], self[index]
+    end
+
+    self
   end
 
 end
