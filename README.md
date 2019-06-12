@@ -8,6 +8,24 @@
 
 My little area to play around with remaking Ruby's methods in an attempt to understand the complexity behind them.
 
+### Graph builder
+
+Using the `pi_charts` and `sinatra` gems to build graphs representing the processing time of the methods in order to be able to tweak them.
+
+![chart][chart]
+
+Usage:  
+`ruby ./lib/build_graphs.rb`  
+
+This will start a sinatra session. Open a new tab on your browser and in the address bar type:
+
+`localhost:4567`
+
+Give a minute to crunch the numbers (fibonacci takes the longest).
+A graph should appear on your screen.
+
+---
+
 ### Ruby Timer
 
 A simple timer class made to time the amount of time it takes for a block of code to be completed.
@@ -88,4 +106,5 @@ Usage:
 [bubble]: ./lib/images/Bubble-sort-example-300px.gif "Wikipedia's Bubble sort illustration"
 [quick]: ./lib/images/220px-Sorting_quicksort_anim.gif "Wikipedia's Quick sort illustration"
 [fibonacci]: ./lib/images/34_21-FibonacciBlocks.png "Wikipedia's Fibonacci number illustration"
+[chart]: ./charts/chart.png "Example of the charts in action"
 
