@@ -1,0 +1,11 @@
+<div id="canvas-holder" style="width:50%">
+        <canvas id="215c8bcd-5046-49ca-988a-2d37bbae12ba" />
+</div>
+
+<script>
+  var config = {"type":"line","data":{"datasets":[{"label":"Reverse","borderColor":"#bb14e8","backgroundColor":"#bb14e8","fill":false,"data":[1.8516e-06,1.1648e-06,1.4452e-06,8.04e-07,8.392e-07,7.4e-07,7.248e-07,6.944e-07,6.994e-07,7.094e-07,6.9e-07,6.860000000000001e-07,7.002e-07,7.17e-07,7.629999999999999e-07,7.37e-07,7.306e-07,7.122e-07,7.964e-07]}],"labels":["100","500","1000","1500","2000","3000","3500","4000","5000","5500","6000","6500","7000","7500","8000","8500","9000","9500","10000"],"options":[]},"options":{"hover":{"mode":"nearest","intersect":true},"responsive":true}}
+  window.onload = function() {
+    var ctx = document.getElementById("215c8bcd-5046-49ca-988a-2d37bbae12ba").getContext("2d");
+    new Chart(ctx, config);
+  };
+</script>

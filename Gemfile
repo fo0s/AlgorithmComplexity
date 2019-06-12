@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'gruff'
-gem 'tty-prompt'
+gem "pi_charts"
+gem "sinatra"

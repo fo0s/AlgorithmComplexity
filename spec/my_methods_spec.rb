@@ -30,7 +30,7 @@ end
 
 describe 'Numbers--' do
   it 'reverses the values of a number' do
-    expect(12_345.my_reverse).to eq(54_321)
+    expect(12345.my_reverse).to eq(54321)
   end
 
   it 'returns a fibonacci sequence up to 8' do
