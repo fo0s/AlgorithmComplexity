@@ -10,16 +10,14 @@ def build_graph
                 40000, 45000, 50000, 55000, 60000, 65000, 70000,
                 75000, 80000, 85000, 90000, 95000, 100000]
 
+  @methods = [ "my_reverse", "my_shuffle", "my_fib",
+                "my_bubble_sort", "my_quick_sort" ]
+
   @my_reverse_results = []
   @my_shuffle_results = []
   @my_fib_results = []
   @my_bubble_results = []
   @my_quick_results = []
-  @benchmark_reverse_results = []
-  @benchmark_fib_results = []
-
-  # Flushing CPU
-  Timer.time { 10000.my_reverse }
 
   # Building datasets
 
@@ -30,7 +28,7 @@ def build_graph
       Timer.time { datapoint.my_reverse }
       temp_data << Timer.elapsedTime
     end
-    @my_reverse_results << (temp_data.sum / 20) * 100
+    @my_reverse_results << (temp_data.shift(5).pop(5).sum / 10) * 100
   end
 
   # my_shuffle
@@ -40,7 +38,7 @@ def build_graph
       Timer.time { datapoint.my_shuffle }
       temp_data << Timer.elapsedTime
     end
-    @my_shuffle_results << (temp_data.sum / 20) * 100
+    @my_shuffle_results << (temp_data.shift(5).pop(5).sum / 10) * 100
   end
 
   # my_fib
@@ -50,7 +48,7 @@ def build_graph
       Timer.time { datapoint.my_fib }
       temp_data << Timer.elapsedTime
     end
-    @my_fib_results << (temp_data.sum / 20) / 100
+    @my_fib_results << (temp_data.shift(5).pop(5).sum / 10) / 100
   end
 
   # my_bubble_sort after my_shuffle
@@ -63,7 +61,7 @@ def build_graph
         data.my_bubble_sort }
         temp_data << Timer.elapsedTime
     end
-    @my_bubble_results << (temp_data.sum / 20) * 100
+    @my_bubble_results << (temp_data.shift(5).pop(5).sum / 10) * 100
   end
 
     @datapoints.each do |datapoint|
@@ -74,7 +72,7 @@ def build_graph
         data.my_quick_sort }
         temp_data << Timer.elapsedTime
     end
-    @my_quick_results << (temp_data.sum / 20) * 100
+    @my_quick_results << (temp_data.shift(5).pop(5).sum / 10) * 100
   end
 
   # Create a new line chart
@@ -95,7 +93,6 @@ def build_graph
 
 
   # Neat 'lil configurations
-  chart.tension(dataset: "my_reverse", amount: 0)
   chart.hover
   chart.responsive
 

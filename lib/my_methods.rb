@@ -91,12 +91,24 @@ class Integer
   end
 
   def my_fib
-    fib_seq = [0, 1]
+    # fib_seq = Array.new(self + 1)
+    # fib_seq(0) = 0
+    # fib_seq(1) = 1
+    # fib_num = 0
 
-    self.times do
-      last_num = fib_seq[-1]
-      second_last_num = fib_seq[-2]
-      fib_seq << (second_last_num + last_num)
+    # self.times do
+    #   fib_num += 1
+    #   last_num, second_last_num = fib_seq.last(2)
+    #   fib_seq.insert((fib_num - 1), second_last_num)
+    #   fib_seq.insert(fib_num, last_num)
+    #  end
+
+    fib_seq = Array(0..self + 1)
+    index = 2
+
+    until index == fib_seq.length
+      fib_seq[index] = fib_seq[index - 1] + fib_seq[index - 2]
+      index += 1
     end
 
     fib_seq
