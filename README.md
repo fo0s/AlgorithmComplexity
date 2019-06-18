@@ -68,6 +68,16 @@ Usage:
 
 ---
 
+### Find duplicates
+
+Given a string of words, it returns the duplicates.
+
+Usage:  
+`'the quick brown fox jumps over the lazy dog'.my_duplicates`  
+> => "the"
+
+---
+
 ### Sort
 
 Custom sorting methods. Sorting options; my_bubble_sort and my_quick_sort. Can currently only sort arrays.
