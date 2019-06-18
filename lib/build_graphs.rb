@@ -19,6 +19,13 @@ def build_graph
   @my_bubble_results = []
   @my_quick_results = []
 
+  # Warm up
+  p "Warming up"
+  warm_up = Array(1..100000)
+  warm_up.shuffle.sort.reverse
+
+
+  p "Starting tests"
   # Building datasets
 
   # my_reverse integer

@@ -12,6 +12,10 @@ describe 'Strings' do
   it 'displays the 2 most occuring words or characters in a string' do
     expect('a b c d a c d a'.two_most).to eq("[\"a\", 3], [\"d\", 2]")
   end
+
+  it 'returns any duplicates in a string' do
+    expect('the quick brown fox jumps over the lazy dog'.my_duplicates).to eq("the")
+  end
 end
 
 describe 'Arrays--' do

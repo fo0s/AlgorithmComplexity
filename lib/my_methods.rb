@@ -32,6 +32,11 @@ class String
     "#{@order[-1].to_s}, #{@order[-2].to_s}"
   end
 
+  def my_duplicates
+    duplicate_hash = Hash.new(0)
+    self.split().find { |each| (duplicate_hash[each] += 1) == 2 }
+  end
+
 end
 
 # Overriding array class
@@ -73,7 +78,6 @@ class Array
 
     self
   end
-
 end
 
 # Overriding integer class
@@ -91,18 +95,6 @@ class Integer
   end
 
   def my_fib
-    # fib_seq = Array.new(self + 1)
-    # fib_seq(0) = 0
-    # fib_seq(1) = 1
-    # fib_num = 0
-
-    # self.times do
-    #   fib_num += 1
-    #   last_num, second_last_num = fib_seq.last(2)
-    #   fib_seq.insert((fib_num - 1), second_last_num)
-    #   fib_seq.insert(fib_num, last_num)
-    #  end
-
     fib_seq = Array(0..self + 1)
     index = 2
 
