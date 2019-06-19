@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Overriding string class
 class String
   def my_reverse
@@ -12,15 +14,15 @@ class String
   end
 
   def my_shuffle
-    original = self.split("")
+    original = split('')
     original.my_shuffle
-    original.join().to_s
+    original.join.to_s
   end
 
   def two_most
     hash_values = {}
     @order = []
-    words = self.split
+    words = split
     words.each do |word|
       hash_values[word] = hash_values.key?(word) ? hash_values[word] + 1 : 1
     end
@@ -29,14 +31,13 @@ class String
       @order << [element[0], element[1]]
     end
 
-    "#{@order[-1].to_s}, #{@order[-2].to_s}"
+    "#{@order[-1]}, #{@order[-2]}"
   end
 
   def my_duplicates
     duplicate_hash = Hash.new(0)
-    self.split().find { |each| (duplicate_hash[each] += 1) == 2 }
+    split.find { |each| (duplicate_hash[each] += 1) == 2 }
   end
-
 end
 
 # Overriding array class
@@ -82,10 +83,8 @@ class Array
   def my_pairing
     @pairs = []
     @list = self
-    
 
-    return @pairs = [[ list[0], list[1]]] if list.size < 4
-
+    return @pairs = [[list[0], list[1]]] if list.size < 4
   end
 end
 
@@ -116,8 +115,8 @@ class Integer
   end
 
   def my_shuffle
-    original = self.to_s.split("")
+    original = to_s.split('')
     original.my_shuffle
-    original.join().to_i
+    original.join.to_i
   end
 end

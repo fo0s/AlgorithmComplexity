@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'my_methods'
 
 describe 'Strings' do
@@ -10,11 +12,11 @@ describe 'Strings' do
   end
 
   it 'displays the 2 most occuring words or characters in a string' do
-    expect('a b c d a c d a'.two_most).to eq("[\"a\", 3], [\"d\", 2]")
+    expect('a b c d a c d a'.two_most).to eq('["a", 3], ["d", 2]')
   end
 
   it 'returns any duplicates in a string' do
-    expect('the quick brown fox jumps over the lazy dog'.my_duplicates).to eq("the")
+    expect('the quick brown fox jumps over the lazy dog'.my_duplicates).to eq('the')
   end
 end
 
@@ -42,7 +44,7 @@ end
 
 describe 'Numbers--' do
   it 'reverses the values of a number' do
-    expect(12345.my_reverse).to eq(54321)
+    expect(12_345.my_reverse).to eq(54_321)
   end
 
   it 'returns a fibonacci sequence up to 8' do
@@ -50,6 +52,6 @@ describe 'Numbers--' do
   end
 
   it 'returns a shuffled number' do
-    expect(1234567.my_shuffle).to_not eq(1234567)
+    expect(1_234_567.my_shuffle).to_not eq(1_234_567)
   end
 end
