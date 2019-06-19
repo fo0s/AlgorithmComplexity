@@ -113,6 +113,16 @@ Usage:
 `8.my_fib`  
 > => [0, 1, 1, 2, 3, 5, 8, 13, 21]
 
+--- 
+
+### Useful links/guides/resources
+
+[How many ways can you arrange a deck of cards? - Yannay Khaikin](https://www.youtube.com/watch?v=uNS1QvDzCVw&ab_channel=TED-Ed)  
+[The Hair Algorithm - Computerphile](https://www.youtube.com/watch?v=CpXaH77B8xg)  
+[Sorting Secret - Computerphile](https://www.youtube.com/watch?v=pcJHkWwjNl4)  
+[Getting Sorted & Big O Notation - Computerphile](https://www.youtube.com/watch?v=kgBjXUE_Nwc)
+
+
 [bubble]: ./lib/images/Bubble-sort-example-300px.gif "Wikipedia's Bubble sort illustration"
 [quick]: ./lib/images/220px-Sorting_quicksort_anim.gif "Wikipedia's Quick sort illustration"
 [fibonacci]: ./lib/images/34_21-FibonacciBlocks.png "Wikipedia's Fibonacci number illustration"

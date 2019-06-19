@@ -78,6 +78,15 @@ class Array
 
     self
   end
+
+  def my_pairing
+    @pairs = []
+    @list = self
+    
+
+    return @pairs = [[ list[0], list[1]]] if list.size < 4
+
+  end
 end
 
 # Overriding integer class

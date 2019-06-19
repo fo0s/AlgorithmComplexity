@@ -24,8 +24,6 @@ def build_graph
   warm_up = Array(1..100000)
   warm_up.shuffle.sort.reverse
 
-
-  p "Starting tests"
   # Building datasets
 
   # my_reverse integer
@@ -96,8 +94,6 @@ def build_graph
   chart.add_dataset(label: "my_fib (divided by 100)", data: @my_fib_results)
   chart.add_dataset(label: "my_bubble_sort", data: @my_bubble_results)
   chart.add_dataset(label: "my_quick_sort", data: @my_quick_results)
-
-
 
   # Neat 'lil configurations
   chart.hover
