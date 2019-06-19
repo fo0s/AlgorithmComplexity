@@ -27,4 +27,4 @@ def my_pairing(input)
   @output
   end
 
-p my_pairing(%w[Alice Bob Charly Dan])
+p my_pairing([Alice Bob Charly Dan])

@@ -4,9 +4,8 @@
 class String
   def my_reverse
     reversed_string = ''
-    string_length = length - 1
 
-    string_length.downto(0).each do |letter|
+    (self.length - 1).downto(0).each do |letter|
       reversed_string << self[letter]
     end
 
@@ -22,8 +21,7 @@ class String
   def two_most
     hash_values = {}
     @order = []
-    words = split
-    words.each do |word|
+    split.each do |word|
       hash_values[word] = hash_values.key?(word) ? hash_values[word] + 1 : 1
     end
     # sort the hash by value. Store for future extraction
@@ -81,10 +79,7 @@ class Array
   end
 
   def my_pairing
-    @pairs = []
-    @list = self
-
-    return @pairs = [[list[0], list[1]]] if list.size < 4
+    # Testing in test.rb
   end
 end
 
