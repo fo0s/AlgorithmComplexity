@@ -73,7 +73,6 @@ def build_graph
   end
 
   # my_bubble_sort after my_shuffle
-
   @datapoints.each do |datapoint|
     # Warm up process
 
@@ -89,7 +88,7 @@ def build_graph
 
   @datapoints.each do |datapoint|
     # Warm up process
-    Array(1..1000).shuffle.my_bubble_sort
+    Array(1..1000).shuffle.my_quick_sort
 
     temp_data = []
     data = Array(1..datapoint)
