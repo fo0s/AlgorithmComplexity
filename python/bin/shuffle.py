@@ -24,6 +24,10 @@ class ShuffleNumbersWords:
 
         while shuf_len > 1:
             i = int(floor(random() * shuf_len))
+            # Added; reverse whole whole input when it reaches half way
+            if shuf_len == (len(input) / 2):
+                input.reverse()
+            print(input)
             # Shorten index
             shuf_len -= 1
             # Swop characters around
