@@ -79,6 +79,42 @@ class Array
   def my_pairing
     # Testing in test.rb
   end
+
+  def my_merge_sort
+    return self if self.length <= 1
+
+    if self.length == 2
+      if (self[0] > self[1])
+        self[0], self[1] = self[1],self[0]
+      end
+
+      self
+    end
+
+    left = self[0...self.length/2].my_merge_sort
+    right = self[self.length/2...self.length].my_merge_sort
+
+    arr = []
+
+    while(!left.empty? and !right.empty?)
+      if left.first < right.first
+        arr << left.first
+        left.shift
+      else
+        arr << right.first
+        right.shift
+      end
+    end
+
+    if !left.empty?
+      arr += left
+    elsif !right.empty?
+      arr += right
+    end
+
+    arr
+  end
+
 end
 
 # Overriding integer class

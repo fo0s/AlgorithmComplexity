@@ -1,21 +1,21 @@
 # frozen_string_literal: true
 
-require 'simplecov'
-require 'simplecov-console'
-require 'coveralls'
+# require 'simplecov'
+# require 'simplecov-console'
+# require 'coveralls'
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 
 system 'clear'
 
-Coveralls.wear!
+# Coveralls.wear!
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
-                                                                 Coveralls::SimpleCov::Formatter,
-                                                                 SimpleCov::Formatter::Console
-                                                               ])
-SimpleCov.start
+# SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+#                                                                  Coveralls::SimpleCov::Formatter,
+#                                                                  SimpleCov::Formatter::Console
+#                                                                ])
+# SimpleCov.start
 
 RSpec::Expectations.configuration.on_potential_false_positives = :nothing
 
