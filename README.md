@@ -8,7 +8,7 @@
 
 My little area to play around with remaking Ruby's methods in an attempt to understand the complexity behind them.
 
-### Graph builder
+## Graph builder
 
 Using the `pi_charts` and `sinatra` gems to build graphs representing the processing time of the methods in order to be able to tweak them.
 
@@ -32,7 +32,7 @@ A simple timer class made to time the amount of time it takes for a block of cod
 
 Usage:  
 `Timer.time { [1, 2, 3, 4, 5].my_reverse }`  
-`p Timer.elapsedTime `
+`p Timer.elapsedTime`
 
 > => 1.9964e-05
 
@@ -86,7 +86,6 @@ Custom sorting methods. Sorting options; my_bubble_sort and my_quick_sort. Can c
 | :---: | :---: |
 | Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent pairs and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. | ![bubble sort][bubble] |
 
-
 Usage:  
 `[5, 2, 4, 1, 3].my_bubble_sort`  
 > => [1, 2, 3, 4, 5]
@@ -105,8 +104,7 @@ Usage:
 
 | Description | Illustrated image |
 | :---: | :---: |
-Merge sort is a rock star when it comes to data sorting. It's the favourite among computer scientists as it has the best trade offs between speed and memory.
-It uses the divide and concur method. Split the element into it's smallest unit (1), then compare left and right elements merging while doing so. |  ![merge sort][merge]
+Merge sort is a rock star when it comes to data sorting. It's the favourite among computer scientists as it has the best trade offs between speed and memory. It uses the divide and concur method. Split the element into it's smallest unit (1), then compare left and right elements merging while doing so. |  ![merge sort][merge]
 
 Usage:  
 `[5, 2, 4, 1, 3].my_merge_sort`  
@@ -124,7 +122,7 @@ Usage:
 `8.my_fib`  
 > => [0, 1, 1, 2, 3, 5, 8, 13, 21]
 
---- 
+---
 
 ### Useful links/guides/resources
 

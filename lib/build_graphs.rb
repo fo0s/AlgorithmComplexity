@@ -31,7 +31,7 @@ def build_graph
 
   # Building datasets
 
-#   # my_reverse integer
+  #   # my_reverse integer
   @datapoints.each do |datapoint|
     # Warm up process
     Array(1..1000).my_reverse
@@ -45,7 +45,7 @@ def build_graph
     @my_reverse_results << (temp_data.sort.shift(5).pop(5).sum / 10)
   end
 
-# #   # my_shuffle
+  # #   # my_shuffle
   @datapoints.each do |datapoint|
     # Warm up process
     Array(1..1000).my_shuffle
@@ -59,7 +59,7 @@ def build_graph
     @my_shuffle_results << (temp_data.sort.shift(5).pop(5).sum / 10)
   end
 
-#  # my_fib
+  #  # my_fib
   @datapoints.each do |datapoint|
     # Warm up process
     1000.my_fib

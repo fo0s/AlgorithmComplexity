@@ -1,30 +1,35 @@
 # frozen_string_literal: true
 
-def my_pairing(input)
-  @pairs = []
-  @list = input
-  @pivot = @list[0]
-  @pivot_tail = @list[1..-1]
-  @output = {}
+# # frozen_string_literal: true
+require_relative 'my_methods.rb'
 
-  return @pairs = [[@list[0], @list[1]]] if @list.size < 3
+# def my_pairing(input)
+#   @pairs = []
+#   @list = input
+#   @pivot = @list[0]
+#   @pivot_tail = @list[1..-1]
+#   @output = {}
 
-  (0..(@list.size - 2)).each do |index|
-    group = []
+#   return @pairs = [[@list[0], @list[1]]] if @list.size < 3
 
-    group << [@pivot, @pivot_tail[index]] # first pair
+#   (0..(@list.size - 2)).each do |index|
+#     group = []
 
-    (1..((@list.size / 2).round - 1)).each do |index2|
-      current_pair = [@pivot_tail[index + index2], @pivot_tail[index - index2]]
-      group << current_pair
-    end
+#     group << [@pivot, @pivot_tail[index]] # first pair
 
-    @pairs << group
-  end
+#     (1..((@list.size / 2).round - 1)).each do |index2|
+#       current_pair = [@pivot_tail[index + index2], @pivot_tail[index - index2]]
+#       group << current_pair
+#     end
 
-  @pairs.each_with_index { |pairings, days| @output[(days + 1)] = pairings }
+#     @pairs << group
+#   end
 
-  @output
-  end
+#   @pairs.each_with_index { |pairings, days| @output[(days + 1)] = pairings }
 
-p my_pairing(["Alice", "Bob", "Charly", "Dan", "Eric", "Fran"])
+#   @output
+#   end
+
+# p my_pairing(["Alice", "Bob", "Charly", "Dan", "Eric", "Fran"])
+
+numbers = [1..30].my_shuffle

@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 # Overriding string class
 class String
   def my_reverse
     reversed_string = ''
 
-    (self.length - 1).downto(0).each do |letter|
+    (length - 1).downto(0).each do |letter|
       reversed_string << self[letter]
     end
 
@@ -71,6 +73,7 @@ class Array
     (length - 1).downto(1) do |index|
       letter = rand(index + 1)
       self[index], self[letter] = self[letter], self[index]
+      reverse if index == (length / 2)
     end
 
     self
@@ -84,19 +87,17 @@ class Array
     return self if length <= 1
 
     if length == 2
-      if (self[0] > self[1])
-        self[0], self[1] = self[1],self[0]
-      end
+      self[0], self[1] = self[1], self[0] if self[0] > self[1]
 
       self
     end
 
-    left = self[0...length/2].my_merge_sort
-    right = self[length/2...length].my_merge_sort
+    left = self[0...length / 2].my_merge_sort
+    right = self[length / 2...length].my_merge_sort
 
     output = []
 
-    while(!left.empty? and !right.empty?)
+    while !left.empty? && !right.empty?
       if left.first < right.first
         output << left.first
         left.shift
@@ -114,7 +115,6 @@ class Array
 
     output
   end
-
 end
 
 # Overriding integer class
