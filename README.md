@@ -103,6 +103,17 @@ Usage:
 
 ---
 
+| Description | Illustrated image |
+| :---: | :---: |
+Merge sort is a rock star when it comes to data sorting. It's the favourite among computer scientists as it has the best trade offs between speed and memory.
+It uses the divide and concur method. Split the element into it's smallest unit (1), then compare left and right elements merging while doing so. |  ![merge sort][merge]
+
+Usage:  
+`[5, 2, 4, 1, 3].my_merge_sort`  
+> => [1, 2, 3, 4, 5]
+
+---
+
 ### Fibonacci Sequence
 
 | Description | Illustrated image |
@@ -122,9 +133,8 @@ Usage:
 [Sorting Secret - Computerphile](https://www.youtube.com/watch?v=pcJHkWwjNl4)  
 [Getting Sorted & Big O Notation - Computerphile](https://www.youtube.com/watch?v=kgBjXUE_Nwc)
 
-
 [bubble]: ./lib/images/Bubble-sort-example-300px.gif "Wikipedia's Bubble sort illustration"
 [quick]: ./lib/images/220px-Sorting_quicksort_anim.gif "Wikipedia's Quick sort illustration"
 [fibonacci]: ./lib/images/34_21-FibonacciBlocks.png "Wikipedia's Fibonacci number illustration"
 [chart]: ./charts/chart.png "Example of the charts in action"
-
+[merge]: ./lib/images/merge-sort.gif "Wikipedia's Merge sort illustration"
