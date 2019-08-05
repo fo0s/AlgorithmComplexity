@@ -105,8 +105,7 @@ Usage:
 
 | Description | Illustrated image |
 | :---: | :---: |
-Merge sort is a rock star when it comes to data sorting. It's the favourite among computer scientists as it has the best trade offs between speed and memory.
-It uses the divide and concur method. Split the element into it's smallest unit (1), then compare left and right elements merging while doing so. |  ![merge sort][merge]
+Merge sort is a rock star when it comes to data sorting. It's the favourite among computer scientists as it has the best trade offs between speed and memory. It uses the divide and concur method. Split the element into it's smallest unit (1), then compare left and right elements merging while doing so. |  ![merge sort][merge]
 
 Usage:  
 `[5, 2, 4, 1, 3].my_merge_sort`  
