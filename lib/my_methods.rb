@@ -81,9 +81,9 @@ class Array
   end
 
   def my_merge_sort
-    return self if self.length <= 1
+    return self if length <= 1
 
-    if self.length == 2
+    if length == 2
       if (self[0] > self[1])
         self[0], self[1] = self[1],self[0]
       end
@@ -91,28 +91,28 @@ class Array
       self
     end
 
-    left = self[0...self.length/2].my_merge_sort
-    right = self[self.length/2...self.length].my_merge_sort
+    left = self[0...length/2].my_merge_sort
+    right = self[length/2...length].my_merge_sort
 
-    arr = []
+    output = []
 
     while(!left.empty? and !right.empty?)
       if left.first < right.first
-        arr << left.first
+        output << left.first
         left.shift
       else
-        arr << right.first
+        output << right.first
         right.shift
       end
     end
 
     if !left.empty?
-      arr += left
+      output += left
     elsif !right.empty?
-      arr += right
+      output += right
     end
 
-    arr
+    output
   end
 
 end
