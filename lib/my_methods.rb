@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Overriding string class
 class String
   def my_reverse
@@ -114,6 +112,21 @@ class Array
     end
 
     output
+  end
+
+  def my_selection_sort
+    (0...length).each do |index|
+      reference = index
+      (index + 1...length).each do |compare|
+        reference = compare if self[compare] < self[reference]
+      end
+
+      if reference != index
+        self[index], self[reference] = self[reference], self[index]
+      end
+    end
+
+    self
   end
 end
 

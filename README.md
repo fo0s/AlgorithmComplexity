@@ -12,8 +12,6 @@ My little area to play around with remaking Ruby's methods in an attempt to unde
 
 Using the `pi_charts` and `sinatra` gems to build graphs representing the processing time of the methods in order to be able to tweak them.
 
-![chart][chart]
-
 Usage:  
 `ruby ./lib/build_graphs.rb`  
 
@@ -23,6 +21,10 @@ This will start a sinatra session. Open a new tab on your browser and in the add
 
 Give a minute to crunch the numbers (fibonacci takes the longest).
 A graph should appear on your screen.
+
+---
+
+![other][other]
 
 ---
 
@@ -78,10 +80,16 @@ Usage:
 
 ---
 
+
 ### Sort
 
-Custom sorting methods. Sorting options; my_bubble_sort and my_quick_sort. Can currently only sort arrays.
+Custom sorting methods. Sorting options; my_bubble_sort, my_quick_sort, my_merge_sort, my_selection_sort. Can currently only sort arrays.
 
+---
+
+![sort][sort]
+
+---
 | Description | Illustrated image |
 | :---: | :---: |
 | Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent pairs and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. | ![bubble sort][bubble] |
@@ -134,5 +142,6 @@ Usage:
 [bubble]: ./lib/images/Bubble-sort-example-300px.gif "Wikipedia's Bubble sort illustration"
 [quick]: ./lib/images/220px-Sorting_quicksort_anim.gif "Wikipedia's Quick sort illustration"
 [fibonacci]: ./lib/images/34_21-FibonacciBlocks.png "Wikipedia's Fibonacci number illustration"
-[chart]: ./charts/chart.png "Example of the charts in action"
+[sort]: ./charts/sorts.png "Sorting algos in action"
+[other]: ./charts/others.png
 [merge]: ./lib/images/merge-sort.gif "Wikipedia's Merge sort illustration"

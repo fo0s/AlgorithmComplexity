@@ -32,4 +32,22 @@ require_relative 'my_methods.rb'
 
 # p my_pairing(["Alice", "Bob", "Charly", "Dan", "Eric", "Fran"])
 
-numbers = [1..30].my_shuffle
+numbers = [*0..30_000].my_shuffle
+
+def my_selection_sort(input)
+  (0...input.length).each do |index|
+    reference = index
+    (index + 1...input.length).each do |compare|
+      reference = compare if input[compare] < input[reference]
+    end
+
+    if reference != index
+      input[index], input[reference] = input[reference], input[index]
+    end
+  end
+
+  input
+end
+
+test = [3, 2, 1]
+p my_selection_sort(numbers)

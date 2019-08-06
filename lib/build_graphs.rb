@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'pi_charts'
 require 'sinatra'
 require 'benchmark'
@@ -9,14 +7,14 @@ require_relative 'my_methods.rb'
 
 def build_graph
   # Big datapoints. Average time: 27 mins (3 runs at 100% cpu)
-  @datapoints = [500, 1000, 5000, 10_000, 15_000, 20_000, 25_000, 30_000, 35_000,
-                 40_000, 45_000, 50_000, 55_000, 60_000, 70_000, 75_000,
-                 80_000, 85_000, 90_000, 95_000, 100_000]
+  @datapoints = [ 500, 1000, 5000, 10_000, 15_000, 20_000, 25_000, 30_000,
+                  35_000, 40_000, 45_000, 50_000, 55_000, 60_000, 70_000,
+                  75_000, 80_000, 85_000, 90_000, 95_000, 100_000]
 
   # Mid datapoints. Average time: 13 mins (10 runs at 100% cpu)
   # @datapoints = [50, 100, 500, 1000, 1500, 2000, 2500, 3000, 3500,
   #               4000, 4500, 5000, 5500, 6000, 7000, 7500,
-  #               8000, 8500, 9000, 9500, 10000]
+  #               8000, 8500, 9000, 9500, 10_000]
 
   # Low datapoints. Average time: 58 sec (10 runs at 100% cpu)
   # @datapoints = [ 100, 200, 300, 400, 500, 600, 700, 800,
@@ -28,14 +26,13 @@ def build_graph
   @my_fib_results = []
   @my_bubble_results = []
   @my_quick_results = []
+  @my_merge_results = []
+  @my_selection_results = []
 
   # Building datasets
 
-  #   # my_reverse integer
+    # my_reverse integer
   @datapoints.each do |datapoint|
-    # Warm up process
-    Array(1..1000).my_reverse
-
     temp_data = []
     data = Array(1..datapoint)
     20.times do
@@ -45,11 +42,8 @@ def build_graph
     @my_reverse_results << (temp_data.sort.shift(5).pop(5).sum / 10)
   end
 
-  # #   # my_shuffle
+  #   # my_shuffle
   @datapoints.each do |datapoint|
-    # Warm up process
-    Array(1..1000).my_shuffle
-
     temp_data = []
     data = Array(1..datapoint)
     20.times do
@@ -61,9 +55,6 @@ def build_graph
 
   #  # my_fib
   @datapoints.each do |datapoint|
-    # Warm up process
-    1000.my_fib
-
     temp_data = []
     20.times do
       Timer.time { datapoint.my_fib }
@@ -73,32 +64,49 @@ def build_graph
   end
 
   # my_bubble_sort after my_shuffle
-  @datapoints.each do |datapoint|
-    # Warm up process
+  # @datapoints.each do |datapoint|
+  #   temp_data = []
+  #   data = Array(1..datapoint)
+  #   20.times do
+  #     data_shuffled = data.shuffle
+  #     Timer.time { data_shuffled.my_bubble_sort }
+  #     temp_data << Timer.elapsedTime
+  #   end
+  #   @my_bubble_results << (temp_data.sort.shift(5).pop(5).sum / 10) / 100
+  # end
 
-    temp_data = []
-    data = Array(1..datapoint)
-    20.times do
-      data_shuffled = data.shuffle
-      Timer.time { data_shuffled.my_bubble_sort }
-      temp_data << Timer.elapsedTime
-    end
-    @my_bubble_results << (temp_data.sort.shift(5).pop(5).sum / 10) / 100
-  end
+  # @datapoints.each do |datapoint|
+  #   temp_data = []
+  #   data = Array(1..datapoint)
+  #   20.times do
+  #     data_shuffled = data.shuffle
+  #     Timer.time { data_shuffled.my_merge_sort }
+  #     temp_data << Timer.elapsedTime
+  #   end
+  #   @my_merge_results << (temp_data.sort.shift(5).pop(5).sum / 10)
+  # end
 
-  @datapoints.each do |datapoint|
-    # Warm up process
-    Array(1..1000).shuffle.my_quick_sort
+  # @datapoints.each do |datapoint|
+  #   temp_data = []
+  #   data = Array(1..datapoint)
+  #   20.times do
+  #     data_shuffled = data.shuffle
+  #     Timer.time { data_shuffled.my_quick_sort }
+  #     temp_data << Timer.elapsedTime
+  #   end
+  #   @my_quick_results << (temp_data.sort.shift(5).pop(5).sum / 10)
+  # end
 
-    temp_data = []
-    data = Array(1..datapoint)
-    20.times do
-      data_shuffled = data.shuffle
-      Timer.time { data_shuffled.my_quick_sort }
-      temp_data << Timer.elapsedTime
-    end
-    @my_quick_results << (temp_data.sort.shift(5).pop(5).sum / 10)
-  end
+  # @datapoints.each do |datapoint|
+  #   temp_data = []
+  #   data = Array(1..datapoint)
+  #   20.times do
+  #     data_shuffled = data.shuffle
+  #     Timer.time { data_shuffled.my_selection_sort }
+  #     temp_data << Timer.elapsedTime
+  #   end
+  #   @my_selection_results << (temp_data.sort.shift(5).pop(5).sum / 200)
+  # end
 
   # Create a new line chart
   chart = PiCharts::Line.new
@@ -112,15 +120,17 @@ def build_graph
   chart.add_dataset(label: 'my_reverse', data: @my_reverse_results)
   chart.add_dataset(label: 'my_shuffle', data: @my_shuffle_results)
   chart.add_dataset(label: 'my_fib', data: @my_fib_results)
-  chart.add_dataset(label: 'my_bubble_sort (divided by 100)', data: @my_bubble_results)
-  chart.add_dataset(label: 'my_quick_sort', data: @my_quick_results)
+  # chart.add_dataset(label: 'my_bubble_sort (divided by 100)', data: @my_bubble_results)
+  # chart.add_dataset(label: 'my_quick_sort', data: @my_quick_results)
+  # chart.add_dataset(label: 'my_merge_sort', data: @my_merge_results)
+  # chart.add_dataset(label: 'my_selection_sort (divided by 200)', data: @my_selection_results)
 
   # Neat 'lil configurations
   chart.hover
   chart.responsive
 
   # Generate html / js for chart
-  '<head>' + chart.cdn + '</head>' + '<body>' + chart.html(width: 100) + '</body>'
+  '<head>' + chart.cdn + '</head>' + '<body>' + chart.html(width: 60) + '</body>'
 end
 
 get('/') { build_graph }

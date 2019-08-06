@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'my_methods'
 
 describe 'Strings' do
@@ -35,6 +33,10 @@ describe 'Arrays--' do
 
   it 'sorts the values of an array using merge sort' do
     expect([4, 2, 1, 7, 3, 5, 6].my_merge_sort).to eq([1, 2, 3, 4, 5, 6, 7])
+  end
+
+  it 'sorts the values of an array using selection sort' do
+    expect([4, 2, 1, 7, 3, 5, 6].my_selection_sort).to eq([1, 2, 3, 4, 5, 6, 7])
   end
 
   it 'shuffles an input of array' do
