@@ -80,8 +80,20 @@ Usage:
 
 ---
 
+### Fibonacci Sequence
 
-### Sort
+| Description | Illustrated image |
+| :---: | :---: |
+| In mathematics, the Fibonacci numbers form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. | ![fib seq][fibonacci]
+
+Usage:  
+`8.my_fib`  
+> => [0, 1, 1, 2, 3, 5, 8, 13, 21]
+
+---
+
+
+## Sort
 
 Custom sorting methods. Sorting options; my_bubble_sort, my_quick_sort, my_merge_sort, my_selection_sort. Can currently only sort arrays.
 
@@ -120,15 +132,9 @@ Usage:
 
 ---
 
-### Fibonacci Sequence
-
 | Description | Illustrated image |
 | :---: | :---: |
-| In mathematics, the Fibonacci numbers form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. | ![fib seq][fibonacci]
-
-Usage:  
-`8.my_fib`  
-> => [0, 1, 1, 2, 3, 5, 8, 13, 21]
+Selection sort is only effective on smaller data sets. It sorts by starting at the beginning of the set and scanning for the lowest value. Once it gets to the end of the set, it swops the lowest value with the beginning value, then moves on to the next value and starts the sequence again.  |  ![selection sort][selection]
 
 ---
 
@@ -144,4 +150,5 @@ Usage:
 [fibonacci]: ./lib/images/34_21-FibonacciBlocks.png "Wikipedia's Fibonacci number illustration"
 [sort]: ./charts/sorts.png "Sorting algos in action"
 [other]: ./charts/others.png
-[merge]: ./lib/images/merge-sort.gif "Wikipedia's Merge sort illustration"
+[merge]: ./lib/images/Merge-sort.gif "Wikipedia's Merge sort illustration"
+[selection]: ./lib/images/Selection-Sort.gif "Selection sort illustration"
