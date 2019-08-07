@@ -6,7 +6,7 @@
 > amount of time to perform. Thus, the amount of time taken and the number of elementary operations
 > performed by the algorithm are taken to differ by at most a constant factor.
 
-My little area to play around with remaking Ruby's methods in an attempt to understand the complexity behind them. 
+My little area to play around with remaking Ruby's methods in an attempt to understand the complexity behind them.
 
 ## Graph builder
 
@@ -26,10 +26,10 @@ I've also added the `memory_checker` gem to compare processing speed to memory u
 
 Usage:  
 
-> Access the file and uncomment the method you want to test. Select the data range (1000 or 100 000), then save the file and run: 
+> Access the file and uncomment the method you want to test. Select the data range (1000 or 100 000), then save the file and run:
 `ruby lib/memory_checker.rb` from the command line.
 
-Memory values will be printed to the terminal. you want to look at the top for:
+Memory values will be printed to the terminal. You want to look at the top for:
 `Total allocated:`
 
 ---
@@ -115,31 +115,31 @@ Custom sorting methods. Sorting options; my_bubble_sort, my_quick_sort, my_merge
 ---
 | Description: Bubble sort | Small data (1000) | Large data (100 000) | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Illustrated image &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | :---: | :---: | :---: | :---: |
-| Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent pairs and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. |Elapsed time: 1.474735882 <br><br> Memory: 9.96MB | Elapsed time: NA <br><br> Memory: NA | ![bubble sort][bubble] |
+| Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent pairs and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. | Elapsed time: 0.866101761 <br><br> Memory: 9.91MB | Elapsed time: NA <br><br> Memory: Overloaded | ![bubble sort][bubble] |
 
 ---
 
 | Description: Quick sort | Small data (1000) | Large data (100 000) | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Illustrated image &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 | :---: | :---: | :---: | :---: |
-Quick sort is an efficient sorting algorithm, serving as a systematic method for placing the elements of a random access file or an array in order. | Elapsed time: 0.047781494 <br><br> Memory: 0.32MB | Elapsed time: 3.131953683 <br><br> Memory: 44.31 MB | ![quick sort][quick]
+Quick sort is an efficient sorting algorithm, serving as a systematic method for placing the elements of a random access file or an array in order. | Elapsed time: 0.025726135 <br><br> Memory: 0.32MB | Elapsed time: 1.804040745 <br><br> Memory: 43.99 MB | ![quick sort][quick]
 
 ---
 
 | Description: Merge sort | Small data (1000) | Large data (100 000) | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Illustrated image &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | :---: | :---: | :---: | :---: |
-Merge sort is a rock star when it comes to data sorting. It's the favourite among computer scientists as it has the best trade offs between speed and memory. It uses the divide and concur method. Split the element into it's smallest unit (1), then compare left and right elements merging while doing so. | Elapsed time: 0.057409008 <br><br> Memory: 0.36MB | Elapsed time: 3.875032641 <br><br> Memory: 44.31 MB | ![merge sort][merge]
+Merge sort is a rock star when it comes to data sorting. It's the favourite among computer scientists as it has the best trade offs between speed and memory. It uses the divide and concur method. Split the element into it's smallest unit (1), then compare left and right elements merging while doing so. | Elapsed time: 0.028966258 <br><br> Memory: 0.36MB | Elapsed time: 2.217660521 <br><br> Memory: 42.96 MB | ![merge sort][merge]
 
 ---
 
 | Description: Selection sort | Small data (1000) | Large data (100 000) | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Illustrated image &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | :---: | :---: | :---: | :---: |
-Selection sort is only effective on smaller data sets. It sorts by starting at the beginning of the set and scanning for the lowest value. Once it gets to the end of the set, it swops the lowest value with the beginning value, then moves on to the next value and starts the sequence again.  | Elapsed time: 0.06875948 <br><br> Memory: 0.08MB | Elapsed time: 327.051645655 <br><br> Memory: 7.99 MB | ![selection sort][selection]
+Selection sort is only effective on smaller data sets. It sorts by starting at the beginning of the set and scanning for the lowest value. Once it gets to the end of the set, it swops the lowest value with the beginning value, then moves on to the next value and starts the sequence again.  | Elapsed time: 0.041622357 <br><br> Memory: 0.08MB | Elapsed time: 214.234077904 <br><br> Memory: 7.99 MB | ![selection sort][selection]
 
 ---
 
 | Description: Insertion sort | Small data (1000) | Large data (100 000) | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Illustrated image &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | :---: | :---: | :---: | :---: |
-Insertion sort is a really simple sorting algorithm that is best used on smaller data sets. Better than both bubble and selection sort, it is the closest to how a player would sort a hand of cards, ie bridge. It starts from the beginning of the list and compares it's value to the value on the left. If the value is higher than it's own, it will keep going down the list until it is the lowest value. It's simplicity means it's great at sorting data as it receives it, ie real time online data.  | Elapsed time: 0.071991705 <br><br> Memory: 40 bytes | Elapsed time: 363.983443438 <br><br> Memory: 40 bytes | ![insertion sort][insertion]
+Insertion sort is a really simple sorting algorithm that is best used on smaller data sets. Better than both bubble and selection sort, it is the closest to how a player would sort a hand of cards, ie bridge. It starts from the beginning of the list and compares it's value to the value on the left. If the value is higher than it's own, it will keep going down the list until it is the lowest value. It's simplicity means it's great at sorting data as it receives it, ie real time online data.  | Elapsed time: 0.031834936 <br><br> Memory: 40 bytes | Elapsed time: 204.608389793 <br><br> Memory: 40 bytes | ![insertion sort][insertion]
 
 ---
 
@@ -163,8 +163,8 @@ TODO:
 [bubble]: ./lib/images/Bubble-sort-example-300px.gif "Wikipedia's Bubble sort illustration"
 [quick]: ./lib/images/220px-Sorting_quicksort_anim.gif "Wikipedia's Quick sort illustration"
 [fibonacci]: ./lib/images/34_21-FibonacciBlocks.png "Wikipedia's Fibonacci number illustration"
-[sort]: ./charts/sorts.png "Sorting algos in action"
+[sort]: ./charts/sorts2.png "Sorting algos in action"
 [other]: ./charts/others.png
-[merge]: ./lib/images/merge-sort.gif "Wikipedia's Merge sort illustration"
+[merge]: ./lib/images/Merge-sort.gif "Wikipedia's Merge sort illustration"
 [selection]: ./lib/images/Selection-Sort.gif "Selection sort illustration"
 [insertion]: ./lib/images/Insertion-sort-example-300px.gif "Wikipedia's Insertion sort illustration"

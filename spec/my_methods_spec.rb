@@ -27,7 +27,7 @@ describe 'Arrays--' do
     expect([4, 2, 1, 7, 3, 5, 6].bubble_sort).to eq([1, 2, 3, 4, 5, 6, 7])
   end
 
-  it 'sorts the values of an array using bubble sort' do
+  it 'sorts the values of an array using quick sort' do
     expect([4, 2, 1, 7, 3, 5, 6].quick_sort).to eq([1, 2, 3, 4, 5, 6, 7])
   end
 

@@ -11,7 +11,7 @@ Timer.time {
       # @data.selection_sort
       # @data.quick_sort
       # @data.insertion_sort
-      # data.bubble_sort
+      # @data.bubble_sort
   end
 }
 
