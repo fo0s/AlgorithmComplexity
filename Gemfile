@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'coveralls'
+gem 'memory_profiler'
 gem 'pi_charts'
 gem 'simplecov'
 gem 'simplecov-console'

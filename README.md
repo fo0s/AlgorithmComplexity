@@ -92,7 +92,6 @@ Usage:
 
 ---
 
-
 ## Sort
 
 Custom sorting methods. Sorting options; my_bubble_sort, my_quick_sort, my_merge_sort, my_selection_sort. Can currently only sort arrays.
@@ -138,6 +137,12 @@ Selection sort is only effective on smaller data sets. It sorts by starting at t
 
 ---
 
+| Description | Illustrated image |
+| :---: | :---: |
+Insertion sort is a really simple sorting algorithm that is best used on smaller data sets. Better than both bubble and selection sort, it is the closest to how a player would sort a hand of cards, ie bridge. It starts from the beginning of the list and compares it's value to the value on the left. If the value is higher than it's own, it will keep going down the list until it is the lowest value. It's simplicity means it's great at sorting data as it receives it, ie real time online data.  |  ![insertion sort][insertion]
+
+---
+
 ### Useful links/guides/resources
 
 [How many ways can you arrange a deck of cards? - Yannay Khaikin](https://www.youtube.com/watch?v=uNS1QvDzCVw&ab_channel=TED-Ed)  
@@ -148,7 +153,7 @@ Selection sort is only effective on smaller data sets. It sorts by starting at t
 TODO:
 
 - Make selection sort more efficient
-- Insertion sort
+- ~~Insertion sort~~
 - Shell sort
 - Comb sort
 - Intro sort
@@ -159,5 +164,6 @@ TODO:
 [fibonacci]: ./lib/images/34_21-FibonacciBlocks.png "Wikipedia's Fibonacci number illustration"
 [sort]: ./charts/sorts.png "Sorting algos in action"
 [other]: ./charts/others.png
-[merge]: ./lib/images/Merge-sort.gif "Wikipedia's Merge sort illustration"
+[merge]: ./lib/images/merge-sort.gif "Wikipedia's Merge sort illustration"
 [selection]: ./lib/images/Selection-Sort.gif "Selection sort illustration"
+[insertion]: ./lib/images/Insertion-sort-example-300px.gif "Wikipedia's Insertion sort illustration"
