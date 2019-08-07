@@ -7,11 +7,11 @@ require_relative 'rubytimer.rb'
 
 Timer.time { 
   @report = MemoryProfiler.report do
-      @data.merge_sort
+      # @data.merge_sort
       # @data.selection_sort
       # @data.quick_sort
       # @data.insertion_sort
-      # @data.bubble_sort
+      @data2.bubble_sort
   end
 }
 
