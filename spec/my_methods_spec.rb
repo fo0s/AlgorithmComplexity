@@ -24,19 +24,19 @@ describe 'Arrays--' do
   end
 
   it 'sorts the values of an array using bubble sort' do
-    expect([4, 2, 1, 7, 3, 5, 6].my_bubble_sort).to eq([1, 2, 3, 4, 5, 6, 7])
+    expect([4, 2, 1, 7, 3, 5, 6].bubble_sort).to eq([1, 2, 3, 4, 5, 6, 7])
   end
 
   it 'sorts the values of an array using bubble sort' do
-    expect([4, 2, 1, 7, 3, 5, 6].my_quick_sort).to eq([1, 2, 3, 4, 5, 6, 7])
+    expect([4, 2, 1, 7, 3, 5, 6].quick_sort).to eq([1, 2, 3, 4, 5, 6, 7])
   end
 
   it 'sorts the values of an array using merge sort' do
-    expect([4, 2, 1, 7, 3, 5, 6].my_merge_sort).to eq([1, 2, 3, 4, 5, 6, 7])
+    expect([4, 2, 1, 7, 3, 5, 6].merge_sort).to eq([1, 2, 3, 4, 5, 6, 7])
   end
 
   it 'sorts the values of an array using selection sort' do
-    expect([4, 2, 1, 7, 3, 5, 6].my_selection_sort).to eq([1, 2, 3, 4, 5, 6, 7])
+    expect([4, 2, 1, 7, 3, 5, 6].selection_sort).to eq([1, 2, 3, 4, 5, 6, 7])
   end
 
   it 'shuffles an input of array' do
@@ -44,7 +44,11 @@ describe 'Arrays--' do
   end
 
   it 'sorts an array full of binary values' do
-    expect([1, 0, 1, 1, 0, 1, 1, 0, 0].my_quick_sort).to eq([0, 0, 0, 0, 1, 1, 1, 1, 1])
+    expect([1, 0, 1, 1, 0, 1, 1, 0, 0].quick_sort).to eq([0, 0, 0, 0, 1, 1, 1, 1, 1])
+  end
+
+  it 'sorts the values of an array using insertion sort' do
+    expect([4, 2, 1, 7, 3, 5, 6].insertion_sort).to eq([1, 2, 3, 4, 5, 6, 7])
   end
 end
 

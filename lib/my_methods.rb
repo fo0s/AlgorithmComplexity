@@ -49,7 +49,7 @@ class Array
   end
 
   # Bubble sort, slow but effective
-  def my_bubble_sort
+  def bubble_sort
     each_index do |index|
       (length - 1).downto(index) do |i|
         self[i - 1], self[i] = self[i], self[i - 1] if self[i - 1] > self[i]
@@ -59,12 +59,12 @@ class Array
     self
   end
 
-  def my_quick_sort
+  def quick_sort
     return self if length <= 1
 
     pivot = self[0]
     less, greatereq = self[1..-1].partition { |x| x < pivot }
-    less.my_quick_sort + [pivot] + greatereq.my_quick_sort
+    less.quick_sort + [pivot] + greatereq.quick_sort
   end
 
   def my_shuffle
@@ -81,7 +81,7 @@ class Array
     # Testing in test.rb
   end
 
-  def my_merge_sort
+  def merge_sort
     return self if length <= 1
 
     if length == 2
@@ -90,8 +90,8 @@ class Array
       self
     end
 
-    left = self[0...length / 2].my_merge_sort
-    right = self[length / 2...length].my_merge_sort
+    left = self[0...length / 2].merge_sort
+    right = self[length / 2...length].merge_sort
 
     output = []
 
@@ -114,7 +114,7 @@ class Array
     output
   end
 
-  def my_selection_sort
+  def selection_sort
     (0...length).each do |index|
       reference = index
       (index + 1...length).each do |compare|
@@ -123,6 +123,19 @@ class Array
 
       if reference != index
         self[index], self[reference] = self[reference], self[index]
+      end
+    end
+
+    self
+  end
+
+  def insertion_sort
+    (1...length).each do |index|
+      reference = index
+
+      while reference > 0 && self[reference] < self[reference-1]
+        self[reference], self[reference-1] = self[reference-1], self[reference]
+        reference -= 1
       end
     end
 

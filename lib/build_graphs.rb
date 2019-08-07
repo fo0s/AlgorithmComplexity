@@ -63,50 +63,50 @@ def build_graph
     @my_fib_results << (temp_data.sort.shift(5).pop(5).sum / 10)
   end
 
-  # my_bubble_sort after my_shuffle
-  # @datapoints.each do |datapoint|
-  #   temp_data = []
-  #   data = Array(1..datapoint)
-  #   20.times do
-  #     data_shuffled = data.shuffle
-  #     Timer.time { data_shuffled.my_bubble_sort }
-  #     temp_data << Timer.elapsedTime
-  #   end
-  #   @my_bubble_results << (temp_data.sort.shift(5).pop(5).sum / 10) / 100
-  # end
+  my_bubble_sort after my_shuffle
+  @datapoints.each do |datapoint|
+    temp_data = []
+    data = Array(1..datapoint)
+    20.times do
+      data_shuffled = data.shuffle
+      Timer.time { data_shuffled.my_bubble_sort }
+      temp_data << Timer.elapsedTime
+    end
+    @my_bubble_results << (temp_data.sort.shift(5).pop(5).sum / 10) / 100
+  end
 
-  # @datapoints.each do |datapoint|
-  #   temp_data = []
-  #   data = Array(1..datapoint)
-  #   20.times do
-  #     data_shuffled = data.shuffle
-  #     Timer.time { data_shuffled.my_merge_sort }
-  #     temp_data << Timer.elapsedTime
-  #   end
-  #   @my_merge_results << (temp_data.sort.shift(5).pop(5).sum / 10)
-  # end
+  @datapoints.each do |datapoint|
+    temp_data = []
+    data = Array(1..datapoint)
+    20.times do
+      data_shuffled = data.shuffle
+      Timer.time { data_shuffled.my_merge_sort }
+      temp_data << Timer.elapsedTime
+    end
+    @my_merge_results << (temp_data.sort.shift(5).pop(5).sum / 10)
+  end
 
-  # @datapoints.each do |datapoint|
-  #   temp_data = []
-  #   data = Array(1..datapoint)
-  #   20.times do
-  #     data_shuffled = data.shuffle
-  #     Timer.time { data_shuffled.my_quick_sort }
-  #     temp_data << Timer.elapsedTime
-  #   end
-  #   @my_quick_results << (temp_data.sort.shift(5).pop(5).sum / 10)
-  # end
+  @datapoints.each do |datapoint|
+    temp_data = []
+    data = Array(1..datapoint)
+    20.times do
+      data_shuffled = data.shuffle
+      Timer.time { data_shuffled.my_quick_sort }
+      temp_data << Timer.elapsedTime
+    end
+    @my_quick_results << (temp_data.sort.shift(5).pop(5).sum / 10)
+  end
 
-  # @datapoints.each do |datapoint|
-  #   temp_data = []
-  #   data = Array(1..datapoint)
-  #   20.times do
-  #     data_shuffled = data.shuffle
-  #     Timer.time { data_shuffled.my_selection_sort }
-  #     temp_data << Timer.elapsedTime
-  #   end
-  #   @my_selection_results << (temp_data.sort.shift(5).pop(5).sum / 200)
-  # end
+  @datapoints.each do |datapoint|
+    temp_data = []
+    data = Array(1..datapoint)
+    20.times do
+      data_shuffled = data.shuffle
+      Timer.time { data_shuffled.my_selection_sort }
+      temp_data << Timer.elapsedTime
+    end
+    @my_selection_results << (temp_data.sort.shift(5).pop(5).sum / 200)
+  end
 
   # Create a new line chart
   chart = PiCharts::Line.new
@@ -120,17 +120,17 @@ def build_graph
   chart.add_dataset(label: 'my_reverse', data: @my_reverse_results)
   chart.add_dataset(label: 'my_shuffle', data: @my_shuffle_results)
   chart.add_dataset(label: 'my_fib', data: @my_fib_results)
-  # chart.add_dataset(label: 'my_bubble_sort (divided by 100)', data: @my_bubble_results)
-  # chart.add_dataset(label: 'my_quick_sort', data: @my_quick_results)
-  # chart.add_dataset(label: 'my_merge_sort', data: @my_merge_results)
-  # chart.add_dataset(label: 'my_selection_sort (divided by 200)', data: @my_selection_results)
+  chart.add_dataset(label: 'my_bubble_sort (divided by 100)', data: @my_bubble_results)
+  chart.add_dataset(label: 'my_quick_sort', data: @my_quick_results)
+  chart.add_dataset(label: 'my_merge_sort', data: @my_merge_results)
+  chart.add_dataset(label: 'my_selection_sort (divided by 200)', data: @my_selection_results)
 
   # Neat 'lil configurations
   chart.hover
   chart.responsive
 
   # Generate html / js for chart
-  '<head>' + chart.cdn + '</head>' + '<body>' + chart.html(width: 60) + '</body>'
+  '<head>' + chart.cdn + '</head>' + '<body>' + chart.html(width: 100) + '</body>'
 end
 
 get('/') { build_graph }

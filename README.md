@@ -145,6 +145,15 @@ Selection sort is only effective on smaller data sets. It sorts by starting at t
 [Sorting Secret - Computerphile](https://www.youtube.com/watch?v=pcJHkWwjNl4)  
 [Getting Sorted & Big O Notation - Computerphile](https://www.youtube.com/watch?v=kgBjXUE_Nwc)
 
+TODO:
+
+- Make selection sort more efficient
+- Insertion sort
+- Shell sort
+- Comb sort
+- Intro sort
+- Tree sort
+
 [bubble]: ./lib/images/Bubble-sort-example-300px.gif "Wikipedia's Bubble sort illustration"
 [quick]: ./lib/images/220px-Sorting_quicksort_anim.gif "Wikipedia's Quick sort illustration"
 [fibonacci]: ./lib/images/34_21-FibonacciBlocks.png "Wikipedia's Fibonacci number illustration"
